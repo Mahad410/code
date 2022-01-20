@@ -1,0 +1,49 @@
+.navbar {
+    box-sizing: border-box;
+    padding: 20px;
+    position: fixed;
+    width: 90%;
+    height: 50px;
+    overflow: hidden;
+    background-color: #141414;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: -50px;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.code {
+    color: orange;
+    visibility: hidden;
+}
+
+li a:hover .code {
+    visibility: visible;
+}
+
+.logo {
+    filter: invert(100%);
+    position: fixed;
+    left: 7.3%;
+    top: 32px;
+}
+
+.active .code {
+    visibility: visible;
+}
