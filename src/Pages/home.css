@@ -1,6 +1,5 @@
 .main-container {
     position: fixed;
-    z-index: -9;
     box-sizing: border-box;
     width: 85vw;
     margin: auto;
@@ -8,10 +7,11 @@
     place-items: center;
     grid-template-columns: 1fr 1fr;
     bottom: 1%;
+    overflow: hidden;
 }
 
 .co {
-    color: orange;
+    color: #ffa500;
 }
 
 .co_text {
@@ -23,7 +23,7 @@
 }
 
 .figure figcaption {
-    color: orange;
+    color: #ffa500;
     margin: 0.5rem auto;
 }
 
@@ -38,15 +38,71 @@
     margin: 1.8rem auto;
 }
 
+.intro {
+    width: 45vw;
+    height: auto;
+}
+
 .intro h1 {
     font-size: 2.9rem;
 }
 
 .del {
-    text-decoration: 3px line-through orange;
+    text-decoration: 3px line-through #ffa500;
+    -moz-text-decoration: 3px line-through #ffa500;
+    -webkit-text-decoration: 3px line-through #ffa500;
 }
 
 .co_und {
-    text-decoration: 3px underline orange;
+    text-decoration: 3px underline #ffa500;
+    -moz-text-decoration: 3px underline #ffa500;
+    -webkit-text-decoration: 3px underline #ffa500;
     color: #fff;
+}
+
+@media screen and (max-width:1200px) {
+    .main-container {
+        bottom: 1.2%;
+    }
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .main-container {
+        width: 78vw;
+        display: table;
+        vertical-align: middle;
+        bottom: 0;
+        top: 20%;
+    }
+    .intro {
+        width: auto;
+        overflow: scroll;
+    }
+    .intro h1 {
+        font-size: 2.7rem;
+    }
+    .video {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .main-container {
+        width: 78vw;
+        display: block;
+        top: 10%;
+    }
+    .intro {
+        width: 95%;
+        height: 86vh;
+    }
+    .intro h1 {
+        font-size: 2.7rem;
+    }
+    .video {
+        display: none;
+    }
 }
